@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea Partita - Cards Against Humanity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Registrazione</a></li>
+            <li><a href="create_game.html">Crea Partita</a></li>
+            <li><a href="join_game.html">Accedi a Partita</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Crea una Partita</h1>
+        <form id="createGameForm">
+            <label for="username">Nome Utente:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Crea Partita</button>
+        </form>
+        <div id="gameCodeContainer" class="hidden">
+            <h2>Codice Partita: <span id="gameCode"></span></h2>
+        </div>
+        <div id="userList" class="hidden">
+            <h2>Utenti</h2>
+            <ul id="users"></ul>
+        </div>
+        <div id="gameArea" class="hidden">
+            <h2>Carte</h2>
+            <button id="drawBlackCard" class="hidden">Pesca una Carta Nera</button>
+            <div id="currentBlackCard" class="card black-card"></div>
+            <div id="whiteCards" class="cards-container"></div>
+            <button id="submitWhiteCard" class="hidden">Invia Carta Bianca</button>
+            <div id="submittedCardsContainer" class="hidden">
+                <h2>Carte inviate</h2>
+                <ul id="submittedCards"></ul>
+            </div>
+            <div id="selectWinnerContainer" class="hidden">
+                <h2>Seleziona la carta vincente</h2>
+                <ul id="submittedCardsForSelection"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="create_game.js"></script>
+</body>
+</html>
